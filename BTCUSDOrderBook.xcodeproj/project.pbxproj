@@ -10,11 +10,13 @@
 		07F694FB476F8FAAF1B6AFEF /* Pods_BTCUSDOrderBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E79C6B5827520A9EB9C41CE /* Pods_BTCUSDOrderBook.framework */; };
 		AD7E203285A0B8C3EEE3E080 /* Pods_BTCUSDOrderBookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B48C934466146CF615042C /* Pods_BTCUSDOrderBookTests.framework */; };
 		DC33FAF1231131CC00D07F12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FAF0231131CC00D07F12 /* AppDelegate.swift */; };
-		DC33FAF3231131CD00D07F12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FAF2231131CC00D07F12 /* ViewController.swift */; };
-		DC33FAF6231131CD00D07F12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC33FAF4231131CD00D07F12 /* Main.storyboard */; };
 		DC33FAF8231131CD00D07F12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC33FAF7231131CD00D07F12 /* Assets.xcassets */; };
 		DC33FAFB231131CD00D07F12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC33FAF9231131CD00D07F12 /* LaunchScreen.storyboard */; };
 		DC33FB06231131CD00D07F12 /* BTCUSDOrderBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB05231131CD00D07F12 /* BTCUSDOrderBookTests.swift */; };
+		DC33FB1B231133F700D07F12 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB17231133F700D07F12 /* BaseWireframe.swift */; };
+		DC33FB1C231133F700D07F12 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB18231133F700D07F12 /* PresenterInterface.swift */; };
+		DC33FB1D231133F700D07F12 /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB19231133F700D07F12 /* ViewInterface.swift */; };
+		DC33FB1E231133F700D07F12 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB1A231133F700D07F12 /* InteractorInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +38,16 @@
 		CCA71E3B8182C6B39FA03C23 /* Pods-BTCUSDOrderBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BTCUSDOrderBook.debug.xcconfig"; path = "Target Support Files/Pods-BTCUSDOrderBook/Pods-BTCUSDOrderBook.debug.xcconfig"; sourceTree = "<group>"; };
 		DC33FAED231131CC00D07F12 /* BTCUSDOrderBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BTCUSDOrderBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC33FAF0231131CC00D07F12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC33FAF2231131CC00D07F12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DC33FAF5231131CD00D07F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC33FAF7231131CD00D07F12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC33FAFA231131CD00D07F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC33FAFC231131CD00D07F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC33FB01231131CD00D07F12 /* BTCUSDOrderBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BTCUSDOrderBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC33FB05231131CD00D07F12 /* BTCUSDOrderBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCUSDOrderBookTests.swift; sourceTree = "<group>"; };
 		DC33FB07231131CD00D07F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC33FB17231133F700D07F12 /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
+		DC33FB18231133F700D07F12 /* PresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
+		DC33FB19231133F700D07F12 /* ViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		DC33FB1A231133F700D07F12 /* InteractorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +113,10 @@
 		DC33FAEF231131CC00D07F12 /* BTCUSDOrderBook */ = {
 			isa = PBXGroup;
 			children = (
+				DC33FB102311334200D07F12 /* App */,
 				DC33FAF0231131CC00D07F12 /* AppDelegate.swift */,
-				DC33FAF2231131CC00D07F12 /* ViewController.swift */,
-				DC33FAF4231131CD00D07F12 /* Main.storyboard */,
+				DC33FB112311337300D07F12 /* Modules */,
+				DC33FB13231133D400D07F12 /* Common */,
 				DC33FAF7231131CD00D07F12 /* Assets.xcassets */,
 				DC33FAF9231131CD00D07F12 /* LaunchScreen.storyboard */,
 				DC33FAFC231131CD00D07F12 /* Info.plist */,
@@ -126,6 +131,47 @@
 				DC33FB07231131CD00D07F12 /* Info.plist */,
 			);
 			path = BTCUSDOrderBookTests;
+			sourceTree = "<group>";
+		};
+		DC33FB102311334200D07F12 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DC33FB112311337300D07F12 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB122311337900D07F12 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DC33FB122311337900D07F12 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DC33FB13231133D400D07F12 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB16231133F700D07F12 /* VIPER */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DC33FB16231133F700D07F12 /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB17231133F700D07F12 /* BaseWireframe.swift */,
+				DC33FB18231133F700D07F12 /* PresenterInterface.swift */,
+				DC33FB19231133F700D07F12 /* ViewInterface.swift */,
+				DC33FB1A231133F700D07F12 /* InteractorInterface.swift */,
+			);
+			path = VIPER;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +261,6 @@
 			files = (
 				DC33FAFB231131CD00D07F12 /* LaunchScreen.storyboard in Resources */,
 				DC33FAF8231131CD00D07F12 /* Assets.xcassets in Resources */,
-				DC33FAF6231131CD00D07F12 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,8 +359,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC33FAF3231131CD00D07F12 /* ViewController.swift in Sources */,
 				DC33FAF1231131CC00D07F12 /* AppDelegate.swift in Sources */,
+				DC33FB1E231133F700D07F12 /* InteractorInterface.swift in Sources */,
+				DC33FB1B231133F700D07F12 /* BaseWireframe.swift in Sources */,
+				DC33FB1D231133F700D07F12 /* ViewInterface.swift in Sources */,
+				DC33FB1C231133F700D07F12 /* PresenterInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,14 +386,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DC33FAF4231131CD00D07F12 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DC33FAF5231131CD00D07F12 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DC33FAF9231131CD00D07F12 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

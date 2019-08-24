@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import SafariServices
-import MessageUI
+import RxAlertController
 import RxSwift
 import RxCocoa
 
@@ -17,6 +16,8 @@ protocol WireframeInterface: class {
     func dismiss(completion: (() -> Void)?)
     func pop()
     func close()
+    
+    func rxShowAlert(withTitle title: String?, message: String?, buttonTitles: [String], preferredStyle: UIAlertController.Style) -> Single<Int>
 }
 
 class BaseWireframe: WireframeInterface {
@@ -94,6 +95,14 @@ extension WireframeInterface where Self: BaseWireframe {
         } else {
             dismiss()
         }
+    }
+    
+}
+
+extension WireframeInterface where Self: BaseWireframe {
+    
+    func rxShowAlert(withTitle title: String?, message: String? = nil, buttonTitles: [String], preferredStyle: UIAlertController.Style = .alert) -> Single<Int> {
+        return UIAlertController.rx.show(in: viewController, title: title, message: message, buttonTitles: buttonTitles, preferredStyle: preferredStyle)
     }
     
 }

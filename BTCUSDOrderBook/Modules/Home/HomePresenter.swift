@@ -24,6 +24,8 @@ final class HomePresenter {
     private unowned let view: HomeViewInterface
     private let wireframe: HomeWireframeInterface
     private let interactor: HomeInteractorInterface
+    
+    private let disposeBag = DisposeBag()
 
     // MARK: - Lifecycle -
 
@@ -33,6 +35,7 @@ final class HomePresenter {
         self.interactor = interactor
         
         interactor.connect()
+        handleDisconnection()
     }
     
     // MARK: - Private functions -
@@ -82,6 +85,16 @@ final class HomePresenter {
                     .map(HomeCellItem.init)
             }
             .asDriver(onErrorJustReturn: [])
+    }
+    
+    private func handleDisconnection() {
+        interactor
+            .isConnected
+            .filter { $0 == false }
+            .flatMap { [unowned wireframe] _ in wireframe.rxShowAlert(withTitle: nil, message: Strings.networkErrorMessage.localized, buttonTitles: [Strings.cancel.localized, Strings.retry.localized], preferredStyle: .alert) }
+            .filter { $0 == 1 }
+            .subscribe(onNext: { [unowned interactor] _ in interactor.connect() })
+            .disposed(by: disposeBag)
     }
     
 }

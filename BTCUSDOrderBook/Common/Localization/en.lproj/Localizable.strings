@@ -14,3 +14,7 @@
 "volume_abbreviation" = "Vol";
 "low" = "Low";
 "high" = "High";
+"cancel" = "Cancel";
+"retry" = "Retry";
+"ok" = "Ok";
+"network_error_message" = "Please check your internet connection and try again!";

@@ -89,14 +89,14 @@ extension Reactive where Base: WebSocketClient {
     
     var connected: Observable<Bool> {
         return self.response
-            .compactMap { response -> Bool in
+            .compactMap { response -> Bool? in
                 if case .connected = response {
                     return true
                 } else if case .disconnected = response {
                     return false
+                } else {
+                    return nil
                 }
-                
-                return false
         }
     }
     

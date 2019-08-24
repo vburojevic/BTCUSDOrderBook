@@ -37,9 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         initializers.forEach { $0.initialize() }
     }
 
-    private func showAppWindow() {
-        guard window == nil else { return }
-        
+    private func showAppWindow() {        
         let window = UIWindow(frame: UIScreen.main.bounds)
         let initialViewController = createInitialViewController()
         window.rootViewController = initialViewController

@@ -17,4 +17,8 @@ enum Strings: String, Localizable {
     case volumeAbbreviation = "volume_abbreviation"
     case low
     case high
+    case cancel
+    case retry
+    case ok
+    case networkErrorMessage = "network_error_message"
 }

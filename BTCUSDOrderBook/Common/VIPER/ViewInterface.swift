@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ViewInterface {
+protocol ViewInterface: class {
 }
 
 extension ViewInterface {

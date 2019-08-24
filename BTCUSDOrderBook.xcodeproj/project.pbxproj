@@ -17,6 +17,14 @@
 		DC33FB1C231133F700D07F12 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB18231133F700D07F12 /* PresenterInterface.swift */; };
 		DC33FB1D231133F700D07F12 /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB19231133F700D07F12 /* ViewInterface.swift */; };
 		DC33FB1E231133F700D07F12 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB1A231133F700D07F12 /* InteractorInterface.swift */; };
+		DC33FB24231134BB00D07F12 /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB1F231134BB00D07F12 /* HomeInterfaces.swift */; };
+		DC33FB25231134BB00D07F12 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB20231134BB00D07F12 /* HomePresenter.swift */; };
+		DC33FB26231134BB00D07F12 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB21231134BB00D07F12 /* HomeViewController.swift */; };
+		DC33FB27231134BB00D07F12 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB22231134BB00D07F12 /* HomeInteractor.swift */; };
+		DC33FB28231134BB00D07F12 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB23231134BB00D07F12 /* HomeWireframe.swift */; };
+		DC33FB2B231135DB00D07F12 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB2A231135DB00D07F12 /* Initializable.swift */; };
+		DC33FB2D231135EA00D07F12 /* AppearanceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB2C231135EA00D07F12 /* AppearanceInitializer.swift */; };
+		DC33FB30231136EF00D07F12 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB2F231136EF00D07F12 /* UIColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +56,14 @@
 		DC33FB18231133F700D07F12 /* PresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
 		DC33FB19231133F700D07F12 /* ViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
 		DC33FB1A231133F700D07F12 /* InteractorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
+		DC33FB1F231134BB00D07F12 /* HomeInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
+		DC33FB20231134BB00D07F12 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		DC33FB21231134BB00D07F12 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DC33FB22231134BB00D07F12 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		DC33FB23231134BB00D07F12 /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		DC33FB2A231135DB00D07F12 /* Initializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializable.swift; sourceTree = "<group>"; };
+		DC33FB2C231135EA00D07F12 /* AppearanceInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceInitializer.swift; sourceTree = "<group>"; };
+		DC33FB2F231136EF00D07F12 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +167,11 @@
 		DC33FB122311337900D07F12 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DC33FB1F231134BB00D07F12 /* HomeInterfaces.swift */,
+				DC33FB20231134BB00D07F12 /* HomePresenter.swift */,
+				DC33FB21231134BB00D07F12 /* HomeViewController.swift */,
+				DC33FB22231134BB00D07F12 /* HomeInteractor.swift */,
+				DC33FB23231134BB00D07F12 /* HomeWireframe.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -158,6 +179,8 @@
 		DC33FB13231133D400D07F12 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DC33FB2E231136E400D07F12 /* Extensions */,
+				DC33FB29231135C400D07F12 /* Initializers */,
 				DC33FB16231133F700D07F12 /* VIPER */,
 			);
 			path = Common;
@@ -172,6 +195,23 @@
 				DC33FB1A231133F700D07F12 /* InteractorInterface.swift */,
 			);
 			path = VIPER;
+			sourceTree = "<group>";
+		};
+		DC33FB29231135C400D07F12 /* Initializers */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB2A231135DB00D07F12 /* Initializable.swift */,
+				DC33FB2C231135EA00D07F12 /* AppearanceInitializer.swift */,
+			);
+			path = Initializers;
+			sourceTree = "<group>";
+		};
+		DC33FB2E231136E400D07F12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB2F231136EF00D07F12 /* UIColorExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,11 +399,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC33FB25231134BB00D07F12 /* HomePresenter.swift in Sources */,
+				DC33FB24231134BB00D07F12 /* HomeInterfaces.swift in Sources */,
+				DC33FB30231136EF00D07F12 /* UIColorExtensions.swift in Sources */,
 				DC33FAF1231131CC00D07F12 /* AppDelegate.swift in Sources */,
+				DC33FB28231134BB00D07F12 /* HomeWireframe.swift in Sources */,
+				DC33FB26231134BB00D07F12 /* HomeViewController.swift in Sources */,
 				DC33FB1E231133F700D07F12 /* InteractorInterface.swift in Sources */,
+				DC33FB2D231135EA00D07F12 /* AppearanceInitializer.swift in Sources */,
 				DC33FB1B231133F700D07F12 /* BaseWireframe.swift in Sources */,
+				DC33FB27231134BB00D07F12 /* HomeInteractor.swift in Sources */,
 				DC33FB1D231133F700D07F12 /* ViewInterface.swift in Sources */,
 				DC33FB1C231133F700D07F12 /* PresenterInterface.swift in Sources */,
+				DC33FB2B231135DB00D07F12 /* Initializable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

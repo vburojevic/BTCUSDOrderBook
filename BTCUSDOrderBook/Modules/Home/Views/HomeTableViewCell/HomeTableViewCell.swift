@@ -57,6 +57,7 @@ final class HomeTableViewCell: UITableViewCell, Reusable {
         let contentStackView = UIStackView(arrangedSubviews: [buyStackView, sellStackView])
         contentStackView.translatesAutoresizingMaskIntoConstraints = false
         contentStackView.distribution = .fillEqually
+        contentStackView.spacing = 16
         
         contentView.addSubview(contentStackView)
         

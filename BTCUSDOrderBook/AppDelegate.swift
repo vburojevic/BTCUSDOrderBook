@@ -24,6 +24,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Window
         showAppWindow()
         
+        SocketService.instance.connect()
+        
+        SocketService
+            .instance
+            .orderBookSubscription
+            .subscribe(onNext: { orderBookSubscription in
+                print("👌 \(orderBookSubscription)")
+            })
+        
+        SocketService
+            .instance
+            .ticker
+            .subscribe(onNext: { ticker in
+                print("⏱️ \(ticker)")
+            })
+        
+        SocketService
+            .instance
+            .orderBookSnapshot
+            .subscribe(onNext: { orderBookSnapshot in
+                print("📚 \(orderBookSnapshot)")
+            })
+        
+        SocketService
+            .instance
+            .orderBookUpdate
+            .subscribe(onNext: { orderBookUpdate in
+                print("📝 \(orderBookUpdate)")
+            })
+        
         return true
     }
     

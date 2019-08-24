@@ -25,6 +25,17 @@
 		DC33FB2B231135DB00D07F12 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB2A231135DB00D07F12 /* Initializable.swift */; };
 		DC33FB2D231135EA00D07F12 /* AppearanceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB2C231135EA00D07F12 /* AppearanceInitializer.swift */; };
 		DC33FB30231136EF00D07F12 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB2F231136EF00D07F12 /* UIColorExtensions.swift */; };
+		DC33FB352311387D00D07F12 /* StarscreamRxExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB342311387D00D07F12 /* StarscreamRxExtensions.swift */; };
+		DC33FB3823113BCE00D07F12 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB3723113BCE00D07F12 /* SocketService.swift */; };
+		DC33FB3E23113CAE00D07F12 /* OrderBookSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB3D23113CAE00D07F12 /* OrderBookSnapshot.swift */; };
+		DC33FB4023113CC900D07F12 /* OrderBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB3F23113CC900D07F12 /* OrderBook.swift */; };
+		DC33FB4423113D0B00D07F12 /* OrderBookUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB4323113D0B00D07F12 /* OrderBookUpdate.swift */; };
+		DC33FB4623113D3600D07F12 /* OrderBookSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB4523113D3600D07F12 /* OrderBookSubscription.swift */; };
+		DC33FB4823113D5D00D07F12 /* OrderBookRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB4723113D5D00D07F12 /* OrderBookRequest.swift */; };
+		DC33FB4A23113D7900D07F12 /* TickerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB4923113D7900D07F12 /* TickerRequest.swift */; };
+		DC33FB4C23113D9A00D07F12 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB4B23113D9A00D07F12 /* Ticker.swift */; };
+		DC33FB5323114F0800D07F12 /* DecodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB5223114F0800D07F12 /* DecodableExtensions.swift */; };
+		DC33FB552311543700D07F12 /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB542311543700D07F12 /* EncodableExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +75,17 @@
 		DC33FB2A231135DB00D07F12 /* Initializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializable.swift; sourceTree = "<group>"; };
 		DC33FB2C231135EA00D07F12 /* AppearanceInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceInitializer.swift; sourceTree = "<group>"; };
 		DC33FB2F231136EF00D07F12 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		DC33FB342311387D00D07F12 /* StarscreamRxExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarscreamRxExtensions.swift; sourceTree = "<group>"; };
+		DC33FB3723113BCE00D07F12 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		DC33FB3D23113CAE00D07F12 /* OrderBookSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookSnapshot.swift; sourceTree = "<group>"; };
+		DC33FB3F23113CC900D07F12 /* OrderBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBook.swift; sourceTree = "<group>"; };
+		DC33FB4323113D0B00D07F12 /* OrderBookUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookUpdate.swift; sourceTree = "<group>"; };
+		DC33FB4523113D3600D07F12 /* OrderBookSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookSubscription.swift; sourceTree = "<group>"; };
+		DC33FB4723113D5D00D07F12 /* OrderBookRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookRequest.swift; sourceTree = "<group>"; };
+		DC33FB4923113D7900D07F12 /* TickerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerRequest.swift; sourceTree = "<group>"; };
+		DC33FB4B23113D9A00D07F12 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
+		DC33FB5223114F0800D07F12 /* DecodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableExtensions.swift; sourceTree = "<group>"; };
+		DC33FB542311543700D07F12 /* EncodableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodableExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +203,8 @@
 			children = (
 				DC33FB2E231136E400D07F12 /* Extensions */,
 				DC33FB29231135C400D07F12 /* Initializers */,
+				DC33FB3923113BE500D07F12 /* Models */,
+				DC33FB312311383F00D07F12 /* Services */,
 				DC33FB16231133F700D07F12 /* VIPER */,
 			);
 			path = Common;
@@ -209,9 +233,90 @@
 		DC33FB2E231136E400D07F12 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				DC33FB2F231136EF00D07F12 /* UIColorExtensions.swift */,
+				DC33FB4D23114BB800D07F12 /* Foundation */,
+				DC33FB332311386100D07F12 /* RxSwift */,
+				DC33FB322311385900D07F12 /* UIKit */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DC33FB312311383F00D07F12 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB3623113B3A00D07F12 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DC33FB322311385900D07F12 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB2F231136EF00D07F12 /* UIColorExtensions.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		DC33FB332311386100D07F12 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB342311387D00D07F12 /* StarscreamRxExtensions.swift */,
+			);
+			path = RxSwift;
+			sourceTree = "<group>";
+		};
+		DC33FB3623113B3A00D07F12 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB3723113BCE00D07F12 /* SocketService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		DC33FB3923113BE500D07F12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB3C23113C1B00D07F12 /* Network */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DC33FB3C23113C1B00D07F12 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB4223113CF400D07F12 /* Requests */,
+				DC33FB4123113CED00D07F12 /* Responses */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DC33FB4123113CED00D07F12 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB3D23113CAE00D07F12 /* OrderBookSnapshot.swift */,
+				DC33FB4323113D0B00D07F12 /* OrderBookUpdate.swift */,
+				DC33FB3F23113CC900D07F12 /* OrderBook.swift */,
+				DC33FB4523113D3600D07F12 /* OrderBookSubscription.swift */,
+				DC33FB4B23113D9A00D07F12 /* Ticker.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		DC33FB4223113CF400D07F12 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB4723113D5D00D07F12 /* OrderBookRequest.swift */,
+				DC33FB4923113D7900D07F12 /* TickerRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		DC33FB4D23114BB800D07F12 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB542311543700D07F12 /* EncodableExtensions.swift */,
+				DC33FB5223114F0800D07F12 /* DecodableExtensions.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,19 +504,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC33FB4C23113D9A00D07F12 /* Ticker.swift in Sources */,
+				DC33FB552311543700D07F12 /* EncodableExtensions.swift in Sources */,
 				DC33FB25231134BB00D07F12 /* HomePresenter.swift in Sources */,
+				DC33FB4823113D5D00D07F12 /* OrderBookRequest.swift in Sources */,
+				DC33FB4023113CC900D07F12 /* OrderBook.swift in Sources */,
+				DC33FB4A23113D7900D07F12 /* TickerRequest.swift in Sources */,
 				DC33FB24231134BB00D07F12 /* HomeInterfaces.swift in Sources */,
 				DC33FB30231136EF00D07F12 /* UIColorExtensions.swift in Sources */,
 				DC33FAF1231131CC00D07F12 /* AppDelegate.swift in Sources */,
 				DC33FB28231134BB00D07F12 /* HomeWireframe.swift in Sources */,
 				DC33FB26231134BB00D07F12 /* HomeViewController.swift in Sources */,
 				DC33FB1E231133F700D07F12 /* InteractorInterface.swift in Sources */,
+				DC33FB4623113D3600D07F12 /* OrderBookSubscription.swift in Sources */,
 				DC33FB2D231135EA00D07F12 /* AppearanceInitializer.swift in Sources */,
+				DC33FB352311387D00D07F12 /* StarscreamRxExtensions.swift in Sources */,
+				DC33FB3E23113CAE00D07F12 /* OrderBookSnapshot.swift in Sources */,
 				DC33FB1B231133F700D07F12 /* BaseWireframe.swift in Sources */,
+				DC33FB3823113BCE00D07F12 /* SocketService.swift in Sources */,
 				DC33FB27231134BB00D07F12 /* HomeInteractor.swift in Sources */,
+				DC33FB4423113D0B00D07F12 /* OrderBookUpdate.swift in Sources */,
 				DC33FB1D231133F700D07F12 /* ViewInterface.swift in Sources */,
 				DC33FB1C231133F700D07F12 /* PresenterInterface.swift in Sources */,
 				DC33FB2B231135DB00D07F12 /* Initializable.swift in Sources */,
+				DC33FB5323114F0800D07F12 /* DecodableExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@ inhibit_all_warnings!
 def reactive
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxAlertController'
 end
 
 def networking

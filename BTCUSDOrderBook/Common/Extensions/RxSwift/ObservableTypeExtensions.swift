@@ -12,6 +12,10 @@ import RxCocoa
 
 extension ObservableType {
     
+    func mapTo<R>(_ value: R) -> Observable<R> {
+        return map { _ in value }
+    }
+    
     func asDriverOnErrorComplete() -> Driver<Element> {
         return self.asDriver(onErrorDriveWith: Driver.empty())
     }

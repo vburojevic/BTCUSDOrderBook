@@ -26,3 +26,13 @@ struct OrderBook: Decodable {
     }
     
 }
+
+extension OrderBook {
+    
+    init(orderBookUpdate: OrderBookUpdate) {
+        price = orderBookUpdate.price
+        count = orderBookUpdate.count
+        amount = orderBookUpdate.amount
+    }
+    
+}

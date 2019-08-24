@@ -21,6 +21,11 @@ final class HomeViewController: UIViewController {
     // MARK: - Private properties -
     
     private let headerView = HomeHeaderView(frame: .zero)
+    private let headerActivityIndicatorView = UIActivityIndicatorView(style: .gray)
+    
+    private let tableView = UITableView(frame: .zero, style: .plain)
+    private let tableActivityIndicatorView = UIActivityIndicatorView(style: .gray)
+    
     private let disposeBag = DisposeBag()
 
     // MARK: - Lifecycle -
@@ -42,12 +47,45 @@ final class HomeViewController: UIViewController {
         
         // Header view
         headerView.translatesAutoresizingMaskIntoConstraints = false
+        headerView.isHidden = true
         view.addSubview(headerView)
         
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             headerView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            headerView.rightAnchor.constraint(equalTo: view.rightAnchor)
+            headerView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            headerView.heightAnchor.constraint(equalToConstant: 200)
+        ])
+        
+        // Header activity indicator view
+        headerActivityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(headerActivityIndicatorView)
+
+        NSLayoutConstraint.activate([
+            headerActivityIndicatorView.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
+            headerActivityIndicatorView.centerYAnchor.constraint(equalTo: headerView.centerYAnchor)
+        ])
+        
+        // Table view
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.isHidden = true
+        tableView.register(cellType: HomeTableViewCell.self)
+        view.addSubview(tableView)
+        
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
+            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        
+        // Table activity indicator view
+        tableActivityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableActivityIndicatorView)
+        
+        NSLayoutConstraint.activate([
+            tableActivityIndicatorView.centerXAnchor.constraint(equalTo: tableView.centerXAnchor),
+            tableActivityIndicatorView.centerYAnchor.constraint(equalTo: tableView.centerYAnchor)
         ])
     }
     
@@ -58,6 +96,34 @@ final class HomeViewController: UIViewController {
         input
             .headerItem
             .drive(headerView.rx.item)
+            .disposed(by: disposeBag)
+        
+        input
+            .isHeaderIndicatorAnimating
+            .drive(headerActivityIndicatorView.rx.isAnimating)
+            .disposed(by: disposeBag)
+        
+        input
+            .isHeaderHidden
+            .drive(headerView.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        input
+            .cellItems
+            .drive(tableView.rx.items(cellIdentifier: HomeTableViewCell.reuseIdentifier)) { _, item, cell in
+                guard let cell = cell as? HomeTableViewCell else { return }
+                cell.configure(with: item)
+            }
+            .disposed(by: disposeBag)
+        
+        input
+            .isTableHidden
+            .drive(tableActivityIndicatorView.rx.isAnimating)
+            .disposed(by: disposeBag)
+        
+        input
+            .isTableHidden
+            .drive(tableView.rx.isHidden)
             .disposed(by: disposeBag)
     }
 	

@@ -45,6 +45,10 @@
 		DC33FB71231172B300D07F12 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB70231172B300D07F12 /* UIStackViewExtensions.swift */; };
 		DC33FB74231177DE00D07F12 /* MoneyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB73231177DE00D07F12 /* MoneyFormatter.swift */; };
 		DC33FB7623117D6D00D07F12 /* ObservableTypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB7523117D6D00D07F12 /* ObservableTypeExtensions.swift */; };
+		DC33FB7A2311918B00D07F12 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB792311918B00D07F12 /* Reusable.swift */; };
+		DC33FB7E231192BE00D07F12 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB7D231192BE00D07F12 /* HomeTableViewCell.swift */; };
+		DC33FB802311957700D07F12 /* HomeCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB7F2311957700D07F12 /* HomeCellItem.swift */; };
+		DC33FB822311AF6C00D07F12 /* DriverExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB812311AF6C00D07F12 /* DriverExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +109,10 @@
 		DC33FB70231172B300D07F12 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensions.swift; sourceTree = "<group>"; };
 		DC33FB73231177DE00D07F12 /* MoneyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyFormatter.swift; sourceTree = "<group>"; };
 		DC33FB7523117D6D00D07F12 /* ObservableTypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTypeExtensions.swift; sourceTree = "<group>"; };
+		DC33FB792311918B00D07F12 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		DC33FB7D231192BE00D07F12 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		DC33FB7F2311957700D07F12 /* HomeCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellItem.swift; sourceTree = "<group>"; };
+		DC33FB812311AF6C00D07F12 /* DriverExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +235,7 @@
 				DC33FB662311706700D07F12 /* Localization */,
 				DC33FB29231135C400D07F12 /* Initializers */,
 				DC33FB3923113BE500D07F12 /* Models */,
+				DC33FB772311916F00D07F12 /* Protocols */,
 				DC33FB312311383F00D07F12 /* Services */,
 				DC33FB6223116F1F00D07F12 /* Views */,
 				DC33FB16231133F700D07F12 /* VIPER */,
@@ -285,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				DC33FB7523117D6D00D07F12 /* ObservableTypeExtensions.swift */,
+				DC33FB812311AF6C00D07F12 /* DriverExtensions.swift */,
 				DC33FB342311387D00D07F12 /* StarscreamRxExtensions.swift */,
 			);
 			path = RxSwift;
@@ -356,8 +366,8 @@
 		DC33FB5D23116AA200D07F12 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DC33FB5F23116AA200D07F12 /* HomeHeaderView.swift */,
-				DC33FB5E23116AA200D07F12 /* HomeHeaderViewItem.swift */,
+				DC33FB7B2311929000D07F12 /* HomeHeaderView */,
+				DC33FB7C231192A700D07F12 /* HomeTableViewCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -394,6 +404,40 @@
 				DC33FB73231177DE00D07F12 /* MoneyFormatter.swift */,
 			);
 			path = Formatters;
+			sourceTree = "<group>";
+		};
+		DC33FB772311916F00D07F12 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB782311917D00D07F12 /* Reusable */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DC33FB782311917D00D07F12 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB792311918B00D07F12 /* Reusable.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		DC33FB7B2311929000D07F12 /* HomeHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB5F23116AA200D07F12 /* HomeHeaderView.swift */,
+				DC33FB5E23116AA200D07F12 /* HomeHeaderViewItem.swift */,
+			);
+			path = HomeHeaderView;
+			sourceTree = "<group>";
+		};
+		DC33FB7C231192A700D07F12 /* HomeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB7D231192BE00D07F12 /* HomeTableViewCell.swift */,
+				DC33FB7F2311957700D07F12 /* HomeCellItem.swift */,
+			);
+			path = HomeTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -594,6 +638,7 @@
 				DC33FB6A2311709000D07F12 /* Localizable.swift in Sources */,
 				DC33FB24231134BB00D07F12 /* HomeInterfaces.swift in Sources */,
 				DC33FB30231136EF00D07F12 /* UIColorExtensions.swift in Sources */,
+				DC33FB7A2311918B00D07F12 /* Reusable.swift in Sources */,
 				DC33FAF1231131CC00D07F12 /* AppDelegate.swift in Sources */,
 				DC33FB28231134BB00D07F12 /* HomeWireframe.swift in Sources */,
 				DC33FB6123116AA300D07F12 /* HomeHeaderView.swift in Sources */,
@@ -603,6 +648,7 @@
 				DC33FB4623113D3600D07F12 /* OrderBookSubscription.swift in Sources */,
 				DC33FB2D231135EA00D07F12 /* AppearanceInitializer.swift in Sources */,
 				DC33FB352311387D00D07F12 /* StarscreamRxExtensions.swift in Sources */,
+				DC33FB822311AF6C00D07F12 /* DriverExtensions.swift in Sources */,
 				DC33FB3E23113CAE00D07F12 /* OrderBookSnapshot.swift in Sources */,
 				DC33FB1B231133F700D07F12 /* BaseWireframe.swift in Sources */,
 				DC33FB3823113BCE00D07F12 /* SocketService.swift in Sources */,
@@ -613,6 +659,8 @@
 				DC33FB1C231133F700D07F12 /* PresenterInterface.swift in Sources */,
 				DC33FB2B231135DB00D07F12 /* Initializable.swift in Sources */,
 				DC33FB5323114F0800D07F12 /* DecodableExtensions.swift in Sources */,
+				DC33FB802311957700D07F12 /* HomeCellItem.swift in Sources */,
+				DC33FB7E231192BE00D07F12 /* HomeTableViewCell.swift in Sources */,
 				DC33FB74231177DE00D07F12 /* MoneyFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

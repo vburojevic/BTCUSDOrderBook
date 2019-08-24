@@ -13,6 +13,11 @@ import RxSwift
 import RxCocoa
 
 final class HomePresenter {
+    
+    enum DataUpdate {
+        case initial([OrderBook])
+        case new(OrderBook)
+    }
 
     // MARK: - Private properties -
 
@@ -30,6 +35,55 @@ final class HomePresenter {
         interactor.connect()
     }
     
+    // MARK: - Private functions -
+    
+    private func headerItem() -> Driver<HomeHeaderViewItem> {
+        return interactor
+            .ticker
+            .map { ("BTCUSD", $0) }
+            .map(HomeHeaderViewItem.init)
+            .asDriverOnErrorComplete()
+    }
+    
+    private func orderBooks() -> Observable<[OrderBook]> {
+        let snapshotOrderBooks = interactor
+            .orderBookSnapshot
+            .first()
+            .asObservable()
+            .compactMap { $0?.orderBooks }
+            .map { DataUpdate.initial($0) }
+        
+        let newOrderBook = interactor
+            .orderBookUpdate
+            .map(OrderBook.init)
+            .map { DataUpdate.new($0) }
+        
+        let orderBooks = Observable
+            .merge(snapshotOrderBooks, newOrderBook)
+            .scan([]) { (previous, dataUpdate) -> [OrderBook] in
+                switch dataUpdate {
+                case let .initial(orderBooks):
+                    return orderBooks
+                case let .new(orderBook):
+                    return Array(([orderBook] + previous).prefix(100))
+                }
+            }
+        
+        return orderBooks
+    }
+    
+    private func cellItems() -> Driver<[HomeCellItem]> {
+        return orderBooks()
+            .map { orderBooks in
+                let buyOrderBooks = orderBooks.filter { $0.amount >= 0 }
+                let sellOrderBooks = orderBooks.filter { $0.amount < 0 }
+                
+                return zip(buyOrderBooks, sellOrderBooks)
+                    .map(HomeCellItem.init)
+            }
+            .asDriver(onErrorJustReturn: [])
+    }
+    
 }
 
 // MARK: - Extensions -
@@ -37,17 +91,23 @@ final class HomePresenter {
 extension HomePresenter: HomePresenterInterface {
     
     func setup(with output: HomeViewOutput) -> HomeViewInput {
-        
-        
-        
         // Header item
-        let headerItem = interactor
-            .ticker
-            .map { ("BTCUSD", $0) }
-            .map(HomeHeaderViewItem.init)
-            .asDriverOnErrorComplete()
+        let headerItem = self.headerItem()
         
-        return HomeViewInput(headerItem: headerItem)
+        // Is header data loading
+        let isHeaderDataLoading = headerItem
+            .mapTo(false)
+            .startWith(true)
+        
+        // Cell items
+        let cellItems = self.cellItems()
+        
+        // Is table data loading
+        let isTableDataLoading = cellItems
+            .mapTo(false)
+            .startWith(true)
+        
+        return HomeViewInput(headerItem: headerItem, isHeaderIndicatorAnimating: isHeaderDataLoading, isHeaderHidden: isHeaderDataLoading, cellItems: cellItems, isTableIndicatorAnimating: isTableDataLoading, isTableHidden: isTableDataLoading)
     }
     
 }

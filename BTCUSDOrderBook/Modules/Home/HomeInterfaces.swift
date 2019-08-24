@@ -40,4 +40,10 @@ struct HomeViewOutput {
 
 struct HomeViewInput {
     let headerItem: Driver<HomeHeaderViewItem>
+    let isHeaderIndicatorAnimating: Driver<Bool>
+    let isHeaderHidden: Driver<Bool>
+    
+    let cellItems: Driver<[HomeCellItem]>
+    let isTableIndicatorAnimating: Driver<Bool>
+    let isTableHidden: Driver<Bool>
 }

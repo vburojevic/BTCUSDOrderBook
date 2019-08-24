@@ -21,11 +21,7 @@ protocol SocketServiceable {
     func connect()
 }
 
-final class SocketService {
-    
-    // MARK: - Instance -
-    
-    static let instance = SocketService()
+final class SocketService: SocketServiceable {
     
     // MARK: - Public properties -
     

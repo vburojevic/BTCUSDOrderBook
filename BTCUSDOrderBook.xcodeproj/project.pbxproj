@@ -36,6 +36,15 @@
 		DC33FB4C23113D9A00D07F12 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB4B23113D9A00D07F12 /* Ticker.swift */; };
 		DC33FB5323114F0800D07F12 /* DecodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB5223114F0800D07F12 /* DecodableExtensions.swift */; };
 		DC33FB552311543700D07F12 /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB542311543700D07F12 /* EncodableExtensions.swift */; };
+		DC33FB6023116AA300D07F12 /* HomeHeaderViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB5E23116AA200D07F12 /* HomeHeaderViewItem.swift */; };
+		DC33FB6123116AA300D07F12 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB5F23116AA200D07F12 /* HomeHeaderView.swift */; };
+		DC33FB6423116F2800D07F12 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB6323116F2800D07F12 /* Label.swift */; };
+		DC33FB682311707C00D07F12 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB672311707C00D07F12 /* Strings.swift */; };
+		DC33FB6A2311709000D07F12 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB692311709000D07F12 /* Localizable.swift */; };
+		DC33FB6D231170C600D07F12 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC33FB6F231170C600D07F12 /* Localizable.strings */; };
+		DC33FB71231172B300D07F12 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB70231172B300D07F12 /* UIStackViewExtensions.swift */; };
+		DC33FB74231177DE00D07F12 /* MoneyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB73231177DE00D07F12 /* MoneyFormatter.swift */; };
+		DC33FB7623117D6D00D07F12 /* ObservableTypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB7523117D6D00D07F12 /* ObservableTypeExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +95,16 @@
 		DC33FB4B23113D9A00D07F12 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
 		DC33FB5223114F0800D07F12 /* DecodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableExtensions.swift; sourceTree = "<group>"; };
 		DC33FB542311543700D07F12 /* EncodableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodableExtensions.swift; sourceTree = "<group>"; };
+		DC33FB5A2311693200D07F12 /* HomeHeaderViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderViewItem.swift; sourceTree = "<group>"; };
+		DC33FB5E23116AA200D07F12 /* HomeHeaderViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderViewItem.swift; sourceTree = "<group>"; };
+		DC33FB5F23116AA200D07F12 /* HomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		DC33FB6323116F2800D07F12 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		DC33FB672311707C00D07F12 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		DC33FB692311709000D07F12 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		DC33FB6E231170C600D07F12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DC33FB70231172B300D07F12 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensions.swift; sourceTree = "<group>"; };
+		DC33FB73231177DE00D07F12 /* MoneyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyFormatter.swift; sourceTree = "<group>"; };
+		DC33FB7523117D6D00D07F12 /* ObservableTypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTypeExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +155,7 @@
 				DC33FAEE231131CC00D07F12 /* Products */,
 				C0C9B311E8CDCBC9AC7C1005 /* Pods */,
 				5681F88DFF86502056401F67 /* Frameworks */,
+				DC33FB5C23116A8C00D07F12 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +209,7 @@
 		DC33FB122311337900D07F12 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DC33FB5D23116AA200D07F12 /* Views */,
 				DC33FB1F231134BB00D07F12 /* HomeInterfaces.swift */,
 				DC33FB20231134BB00D07F12 /* HomePresenter.swift */,
 				DC33FB21231134BB00D07F12 /* HomeViewController.swift */,
@@ -202,9 +223,12 @@
 			isa = PBXGroup;
 			children = (
 				DC33FB2E231136E400D07F12 /* Extensions */,
+				DC33FB72231177D200D07F12 /* Formatters */,
+				DC33FB662311706700D07F12 /* Localization */,
 				DC33FB29231135C400D07F12 /* Initializers */,
 				DC33FB3923113BE500D07F12 /* Models */,
 				DC33FB312311383F00D07F12 /* Services */,
+				DC33FB6223116F1F00D07F12 /* Views */,
 				DC33FB16231133F700D07F12 /* VIPER */,
 			);
 			path = Common;
@@ -252,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				DC33FB2F231136EF00D07F12 /* UIColorExtensions.swift */,
+				DC33FB70231172B300D07F12 /* UIStackViewExtensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -259,6 +284,7 @@
 		DC33FB332311386100D07F12 /* RxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				DC33FB7523117D6D00D07F12 /* ObservableTypeExtensions.swift */,
 				DC33FB342311387D00D07F12 /* StarscreamRxExtensions.swift */,
 			);
 			path = RxSwift;
@@ -317,6 +343,57 @@
 				DC33FB5223114F0800D07F12 /* DecodableExtensions.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		DC33FB5C23116A8C00D07F12 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB5A2311693200D07F12 /* HomeHeaderViewItem.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		DC33FB5D23116AA200D07F12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB5F23116AA200D07F12 /* HomeHeaderView.swift */,
+				DC33FB5E23116AA200D07F12 /* HomeHeaderViewItem.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DC33FB6223116F1F00D07F12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB6523116F2B00D07F12 /* Labels */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DC33FB6523116F2B00D07F12 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB6323116F2800D07F12 /* Label.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		DC33FB662311706700D07F12 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB692311709000D07F12 /* Localizable.swift */,
+				DC33FB672311707C00D07F12 /* Strings.swift */,
+				DC33FB6F231170C600D07F12 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		DC33FB72231177D200D07F12 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FB73231177DE00D07F12 /* MoneyFormatter.swift */,
+			);
+			path = Formatters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC33FAFB231131CD00D07F12 /* LaunchScreen.storyboard in Resources */,
+				DC33FB6D231170C600D07F12 /* Localizable.strings in Resources */,
 				DC33FAF8231131CD00D07F12 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,14 +585,20 @@
 				DC33FB4C23113D9A00D07F12 /* Ticker.swift in Sources */,
 				DC33FB552311543700D07F12 /* EncodableExtensions.swift in Sources */,
 				DC33FB25231134BB00D07F12 /* HomePresenter.swift in Sources */,
+				DC33FB6023116AA300D07F12 /* HomeHeaderViewItem.swift in Sources */,
 				DC33FB4823113D5D00D07F12 /* OrderBookRequest.swift in Sources */,
+				DC33FB71231172B300D07F12 /* UIStackViewExtensions.swift in Sources */,
 				DC33FB4023113CC900D07F12 /* OrderBook.swift in Sources */,
+				DC33FB682311707C00D07F12 /* Strings.swift in Sources */,
 				DC33FB4A23113D7900D07F12 /* TickerRequest.swift in Sources */,
+				DC33FB6A2311709000D07F12 /* Localizable.swift in Sources */,
 				DC33FB24231134BB00D07F12 /* HomeInterfaces.swift in Sources */,
 				DC33FB30231136EF00D07F12 /* UIColorExtensions.swift in Sources */,
 				DC33FAF1231131CC00D07F12 /* AppDelegate.swift in Sources */,
 				DC33FB28231134BB00D07F12 /* HomeWireframe.swift in Sources */,
+				DC33FB6123116AA300D07F12 /* HomeHeaderView.swift in Sources */,
 				DC33FB26231134BB00D07F12 /* HomeViewController.swift in Sources */,
+				DC33FB7623117D6D00D07F12 /* ObservableTypeExtensions.swift in Sources */,
 				DC33FB1E231133F700D07F12 /* InteractorInterface.swift in Sources */,
 				DC33FB4623113D3600D07F12 /* OrderBookSubscription.swift in Sources */,
 				DC33FB2D231135EA00D07F12 /* AppearanceInitializer.swift in Sources */,
@@ -525,9 +609,11 @@
 				DC33FB27231134BB00D07F12 /* HomeInteractor.swift in Sources */,
 				DC33FB4423113D0B00D07F12 /* OrderBookUpdate.swift in Sources */,
 				DC33FB1D231133F700D07F12 /* ViewInterface.swift in Sources */,
+				DC33FB6423116F2800D07F12 /* Label.swift in Sources */,
 				DC33FB1C231133F700D07F12 /* PresenterInterface.swift in Sources */,
 				DC33FB2B231135DB00D07F12 /* Initializable.swift in Sources */,
 				DC33FB5323114F0800D07F12 /* DecodableExtensions.swift in Sources */,
+				DC33FB74231177DE00D07F12 /* MoneyFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +642,14 @@
 				DC33FAFA231131CD00D07F12 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DC33FB6F231170C600D07F12 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC33FB6E231170C600D07F12 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

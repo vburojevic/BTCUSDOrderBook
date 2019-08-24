@@ -100,37 +100,4 @@ extension Reactive where Base: WebSocketClient {
         }
     }
     
-    func write(data: Data) -> Observable<Void> {
-        return Observable.create { subject in
-            self.base.write(data: data) {
-                subject.onNext(())
-                subject.onCompleted()
-            }
-            
-            return Disposables.create()
-        }
-    }
-    
-    func write(ping: Data) -> Observable<Void> {
-        return Observable.create { subject in
-            self.base.write(ping: ping) {
-                subject.onNext(())
-                subject.onCompleted()
-            }
-            
-            return Disposables.create()
-        }
-    }
-    
-    func write(string: String) -> Observable<Void> {
-        return Observable.create { subject in
-            self.base.write(string: string) {
-                subject.onNext(())
-                subject.onCompleted()
-            }
-            
-            return Disposables.create()
-        }
-    }
-    
 }

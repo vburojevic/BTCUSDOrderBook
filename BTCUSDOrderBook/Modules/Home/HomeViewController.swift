@@ -9,25 +9,56 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class HomeViewController: UIViewController {
 
     // MARK: - Public properties -
 
     var presenter: HomePresenterInterface!
+    
+    // MARK: - Private properties -
+    
+    private let headerView = HomeHeaderView(frame: .zero)
+    private let disposeBag = DisposeBag()
 
     // MARK: - Lifecycle -
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        bindView()
     }
     
     // MARK: - Private functions -
     
     private func configureView() {
+        // Title
+        title = "BTC / USD"
+        
         // View
         view.backgroundColor = .backgroundPrimary
+        
+        // Header view
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(headerView)
+        
+        NSLayoutConstraint.activate([
+            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            headerView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            headerView.rightAnchor.constraint(equalTo: view.rightAnchor)
+        ])
+    }
+    
+    private func bindView() {
+        let output = HomeViewOutput()
+        let input = presenter.setup(with: output)
+        
+        input
+            .headerItem
+            .drive(headerView.rx.item)
+            .disposed(by: disposeBag)
     }
 	
 }

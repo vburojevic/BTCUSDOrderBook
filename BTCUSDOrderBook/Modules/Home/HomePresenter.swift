@@ -9,6 +9,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class HomePresenter {
 
@@ -24,6 +26,8 @@ final class HomePresenter {
         self.wireframe = wireframe
         self.view = view
         self.interactor = interactor
+        
+        interactor.connect()
     }
     
 }
@@ -31,4 +35,19 @@ final class HomePresenter {
 // MARK: - Extensions -
 
 extension HomePresenter: HomePresenterInterface {
+    
+    func setup(with output: HomeViewOutput) -> HomeViewInput {
+        
+        
+        
+        // Header item
+        let headerItem = interactor
+            .ticker
+            .map { ("BTCUSD", $0) }
+            .map(HomeHeaderViewItem.init)
+            .asDriverOnErrorComplete()
+        
+        return HomeViewInput(headerItem: headerItem)
+    }
+    
 }

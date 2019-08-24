@@ -9,6 +9,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 enum HomeNavigationOption {
 }
@@ -21,7 +23,21 @@ protocol HomeViewInterface: ViewInterface {
 }
 
 protocol HomePresenterInterface: PresenterInterface {
+    func setup(with output: HomeViewOutput) -> HomeViewInput
 }
 
 protocol HomeInteractorInterface: InteractorInterface {
+    var isConnected: Observable<Bool> { get }
+    var ticker: Observable<Ticker> { get }
+    var orderBookSnapshot: Observable<OrderBookSnapshot> { get }
+    var orderBookUpdate: Observable<OrderBookUpdate> { get }
+    
+    func connect()
+}
+
+struct HomeViewOutput {
+}
+
+struct HomeViewInput {
+    let headerItem: Driver<HomeHeaderViewItem>
 }

@@ -9,11 +9,34 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 final class HomeInteractor {
+    
+    // MARK: - Private properties -
+    
+    private let socketService: SocketServiceable
+    
+    // MARK: - Lifecycle -
+    
+    init(socketService: SocketServiceable = SocketService()) {
+        self.socketService = socketService
+    }
+    
 }
 
 // MARK: - Extensions -
 
 extension HomeInteractor: HomeInteractorInterface {
+    
+    var isConnected: Observable<Bool> { return socketService.isConnected }
+    var ticker: Observable<Ticker> { return socketService.ticker }
+    var orderBookSnapshot: Observable<OrderBookSnapshot> { return socketService.orderBookSnapshot }
+    var orderBookUpdate: Observable<OrderBookUpdate> { return socketService.orderBookUpdate }
+    
+    func connect() {
+        socketService.connect()
+    }
+    
 }

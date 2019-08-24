@@ -12,12 +12,9 @@ final class AppearanceInitializer: Initializable {
     
     func initialize() {
         // Navigation bar
-        UINavigationBar.appearance().barTintColor = .themePrimary
-        UINavigationBar.appearance().tintColor = .themeSecondary
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.themeSecondary]
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().barTintColor = .primary
+        UINavigationBar.appearance().tintColor = .textSecondary
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.textSecondary]
     }
     
 }

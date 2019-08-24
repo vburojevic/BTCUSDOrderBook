@@ -24,36 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Window
         showAppWindow()
         
-        SocketService.instance.connect()
-        
-        SocketService
-            .instance
-            .orderBookSubscription
-            .subscribe(onNext: { orderBookSubscription in
-                print("👌 \(orderBookSubscription)")
-            })
-        
-        SocketService
-            .instance
-            .ticker
-            .subscribe(onNext: { ticker in
-                print("⏱️ \(ticker)")
-            })
-        
-        SocketService
-            .instance
-            .orderBookSnapshot
-            .subscribe(onNext: { orderBookSnapshot in
-                print("📚 \(orderBookSnapshot)")
-            })
-        
-        SocketService
-            .instance
-            .orderBookUpdate
-            .subscribe(onNext: { orderBookUpdate in
-                print("📝 \(orderBookUpdate)")
-            })
-        
         return true
     }
     
@@ -71,13 +41,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard window == nil else { return }
         
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let rootViewController = HomeViewController()
-        let navigationController = UINavigationController(rootViewController: rootViewController)
-        window.rootViewController = navigationController
+        let initialViewController = createInitialViewController()
+        window.rootViewController = initialViewController
         window.makeKeyAndVisible()
         self.window = window
     }
 
-
+    private func createInitialViewController() -> UIViewController {
+        let wireframe = HomeWireframe()
+        let navigationController = UINavigationController(rootViewController: wireframe.viewController)
+        return navigationController
+    }
+    
 }
 

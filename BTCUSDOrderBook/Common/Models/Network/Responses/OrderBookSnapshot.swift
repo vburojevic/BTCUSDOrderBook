@@ -9,13 +9,11 @@
 import Foundation
 
 struct OrderBookSnapshot: Decodable {
-    
-    // MARK: - Public properties -
-    
     let channelId: Int
     let orderBooks: [OrderBook]
-    
-    // MARK: - Lifecycle -
+}
+
+extension OrderBookSnapshot {
     
     init(from decoder: Decoder) throws {
         var container = try decoder.unkeyedContainer()

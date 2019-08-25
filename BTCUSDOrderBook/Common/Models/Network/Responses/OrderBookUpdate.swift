@@ -9,22 +9,20 @@
 import Foundation
 
 struct OrderBookUpdate: Decodable {
-    
-    // MARK: - Public properties -
-    
     let channelId: Int
-    let price: Float
-    let count: Float
-    let amount: Float
-    
-    // MARK: - Lifecycle -
+    let price: Double
+    let count: Double
+    let amount: Double
+}
+
+extension OrderBookUpdate {
     
     init(from decoder: Decoder) throws {
         var container = try decoder.unkeyedContainer()
         channelId = try container.decode(Int.self)
-        price = try container.decode(Float.self)
-        count = try container.decode(Float.self)
-        amount = try container.decode(Float.self)
+        price = try container.decode(Double.self)
+        count = try container.decode(Double.self)
+        amount = try container.decode(Double.self)
     }
     
 }

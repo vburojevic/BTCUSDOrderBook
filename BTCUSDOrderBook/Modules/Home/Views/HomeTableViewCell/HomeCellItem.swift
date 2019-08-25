@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct HomeCellItem {
+struct HomeCellItem: Equatable {
     let buyPrice: String
     let buyAmount: String
     let sellPrice: String

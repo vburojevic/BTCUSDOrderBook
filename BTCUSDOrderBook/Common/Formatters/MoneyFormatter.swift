@@ -21,9 +21,8 @@ final class MoneyFormatter: NumberFormatter {
         locale = Locale(identifier: "en_US_POSIX")
         numberStyle = .currency
         usesGroupingSeparator = true
-        maximumFractionDigits = 0
-        positiveFormat = "¤#,##0.00"
-        negativeFormat = "-¤#,##0.00"
+        positiveFormat = "¤#,##0.0"
+        negativeFormat = "-¤#,##0.0"
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -32,15 +31,14 @@ final class MoneyFormatter: NumberFormatter {
     
     // MARK: - Override -
     
-    func string(from number: NSNumber, maximumFractionDigits: Int = 1) -> String {
-        self.maximumFractionDigits = maximumFractionDigits
+    func money(from number: NSNumber) -> String {
         return super.string(from: number) ?? "N/A"
     }
     
     // MARK: - Public functions -
     
-    func string(from number: Float, maximumFractionDigits: Int = 1) -> String {
-        return string(from: NSNumber(value: number), maximumFractionDigits: maximumFractionDigits)
+    func money(from number: Double) -> String {
+        return money(from: NSNumber(value: number))
     }
     
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct HomeHeaderViewItem {
+struct HomeHeaderViewItem: Equatable {
     let pair: String
     let lastValue: String
     let volume: String
@@ -22,12 +22,12 @@ extension HomeHeaderViewItem {
     
     init(pairName: String, ticker: Ticker) {
         pair = pairName
-        lastValue = Strings.last.localized.uppercased() + ": " + MoneyFormatter.instance.string(from: ticker.lastPrice)
+        lastValue = Strings.last.localized.uppercased() + ": " + ticker.lastPrice.asMoney
         volume = Strings.volumeAbbreviation.localized.uppercased() + ": " + String(format: "%.3f", ticker.volume)
         dailyChangePercentage = String(format: "%.2f", ticker.dailyChangePerc) + " %"
         dailyChangePercentageColor = ticker.dailyChangePerc < 0 ? .error : .primary
-        low = Strings.low.localized.uppercased() + ": " + MoneyFormatter.instance.string(from: ticker.low)
-        high = Strings.high.localized.uppercased() + ": " + MoneyFormatter.instance.string(from: ticker.high)
+        low = Strings.low.localized.uppercased() + ": " + ticker.low.asMoney
+        high = Strings.high.localized.uppercased() + ": " + ticker.high.asMoney
     }
     
 }

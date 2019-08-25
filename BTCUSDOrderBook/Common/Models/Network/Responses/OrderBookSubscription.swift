@@ -9,9 +9,6 @@
 import Foundation
 
 struct OrderBookSubscription: Decodable {
-    
-    // MARK: - Public properties -
-    
     let event: String
     let channel: String
     let pair: String
@@ -19,5 +16,4 @@ struct OrderBookSubscription: Decodable {
     let prec: String
     let freq: String
     let len: String
-    
 }

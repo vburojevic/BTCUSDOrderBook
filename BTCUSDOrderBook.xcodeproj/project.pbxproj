@@ -12,7 +12,6 @@
 		DC33FAF1231131CC00D07F12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FAF0231131CC00D07F12 /* AppDelegate.swift */; };
 		DC33FAF8231131CD00D07F12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC33FAF7231131CD00D07F12 /* Assets.xcassets */; };
 		DC33FAFB231131CD00D07F12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC33FAF9231131CD00D07F12 /* LaunchScreen.storyboard */; };
-		DC33FB06231131CD00D07F12 /* BTCUSDOrderBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB05231131CD00D07F12 /* BTCUSDOrderBookTests.swift */; };
 		DC33FB1B231133F700D07F12 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB17231133F700D07F12 /* BaseWireframe.swift */; };
 		DC33FB1C231133F700D07F12 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB18231133F700D07F12 /* PresenterInterface.swift */; };
 		DC33FB1D231133F700D07F12 /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB19231133F700D07F12 /* ViewInterface.swift */; };
@@ -49,6 +48,14 @@
 		DC33FB7E231192BE00D07F12 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB7D231192BE00D07F12 /* HomeTableViewCell.swift */; };
 		DC33FB802311957700D07F12 /* HomeCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB7F2311957700D07F12 /* HomeCellItem.swift */; };
 		DC33FB822311AF6C00D07F12 /* DriverExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33FB812311AF6C00D07F12 /* DriverExtensions.swift */; };
+		DC7110112311D26F00E8A1A4 /* EncodableExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7110102311D26F00E8A1A4 /* EncodableExtensionsSpec.swift */; };
+		DC7110132311D5F800E8A1A4 /* MoneyFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7110122311D5F800E8A1A4 /* MoneyFormatterSpec.swift */; };
+		DC7110182311DDF100E8A1A4 /* HomeViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7110172311DDF100E8A1A4 /* HomeViewControllerSpy.swift */; };
+		DC71101A2311DE4500E8A1A4 /* HomeInteractorInterfaceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7110192311DE4500E8A1A4 /* HomeInteractorInterfaceSpy.swift */; };
+		DC71101C2311E00200E8A1A4 /* NumericExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC71101B2311E00100E8A1A4 /* NumericExtensions.swift */; };
+		DC71101E2311E12900E8A1A4 /* HomeWireframeInterfaceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC71101D2311E12900E8A1A4 /* HomeWireframeInterfaceSpy.swift */; };
+		DC7110202311E1AC00E8A1A4 /* HomePresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC71101F2311E1AC00E8A1A4 /* HomePresenterSpec.swift */; };
+		DC71102323127A9B00E8A1A4 /* ExpectationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC71102223127A9B00E8A1A4 /* ExpectationExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +81,6 @@
 		DC33FAFA231131CD00D07F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC33FAFC231131CD00D07F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC33FB01231131CD00D07F12 /* BTCUSDOrderBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BTCUSDOrderBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC33FB05231131CD00D07F12 /* BTCUSDOrderBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCUSDOrderBookTests.swift; sourceTree = "<group>"; };
 		DC33FB07231131CD00D07F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC33FB17231133F700D07F12 /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		DC33FB18231133F700D07F12 /* PresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
@@ -113,6 +119,14 @@
 		DC33FB7D231192BE00D07F12 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		DC33FB7F2311957700D07F12 /* HomeCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellItem.swift; sourceTree = "<group>"; };
 		DC33FB812311AF6C00D07F12 /* DriverExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverExtensions.swift; sourceTree = "<group>"; };
+		DC7110102311D26F00E8A1A4 /* EncodableExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtensionsSpec.swift; sourceTree = "<group>"; };
+		DC7110122311D5F800E8A1A4 /* MoneyFormatterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyFormatterSpec.swift; sourceTree = "<group>"; };
+		DC7110172311DDF100E8A1A4 /* HomeViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSpy.swift; sourceTree = "<group>"; };
+		DC7110192311DE4500E8A1A4 /* HomeInteractorInterfaceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorInterfaceSpy.swift; sourceTree = "<group>"; };
+		DC71101B2311E00100E8A1A4 /* NumericExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericExtensions.swift; sourceTree = "<group>"; };
+		DC71101D2311E12900E8A1A4 /* HomeWireframeInterfaceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframeInterfaceSpy.swift; sourceTree = "<group>"; };
+		DC71101F2311E1AC00E8A1A4 /* HomePresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpec.swift; sourceTree = "<group>"; };
+		DC71102223127A9B00E8A1A4 /* ExpectationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpectationExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +207,8 @@
 		DC33FB04231131CD00D07F12 /* BTCUSDOrderBookTests */ = {
 			isa = PBXGroup;
 			children = (
-				DC33FB05231131CD00D07F12 /* BTCUSDOrderBookTests.swift */,
+				DC71102123127A9000E8A1A4 /* Extensions */,
+				DC71100D2311D24B00E8A1A4 /* Common */,
 				DC33FB07231131CD00D07F12 /* Info.plist */,
 			);
 			path = BTCUSDOrderBookTests;
@@ -351,6 +366,7 @@
 			children = (
 				DC33FB542311543700D07F12 /* EncodableExtensions.swift */,
 				DC33FB5223114F0800D07F12 /* DecodableExtensions.swift */,
+				DC71101B2311E00100E8A1A4 /* NumericExtensions.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -440,6 +456,67 @@
 			path = HomeTableViewCell;
 			sourceTree = "<group>";
 		};
+		DC71100D2311D24B00E8A1A4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DC71100E2311D25300E8A1A4 /* Extensions */,
+				DC7110142311DD9600E8A1A4 /* Modules */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DC71100E2311D25300E8A1A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DC71100F2311D25900E8A1A4 /* Foundation */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DC71100F2311D25900E8A1A4 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				DC7110102311D26F00E8A1A4 /* EncodableExtensionsSpec.swift */,
+				DC7110122311D5F800E8A1A4 /* MoneyFormatterSpec.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		DC7110142311DD9600E8A1A4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DC7110152311DDA000E8A1A4 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DC7110152311DDA000E8A1A4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DC7110162311DDE000E8A1A4 /* Spies */,
+				DC71101F2311E1AC00E8A1A4 /* HomePresenterSpec.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DC7110162311DDE000E8A1A4 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				DC7110172311DDF100E8A1A4 /* HomeViewControllerSpy.swift */,
+				DC7110192311DE4500E8A1A4 /* HomeInteractorInterfaceSpy.swift */,
+				DC71101D2311E12900E8A1A4 /* HomeWireframeInterfaceSpy.swift */,
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
+		DC71102123127A9000E8A1A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DC71102223127A9B00E8A1A4 /* ExpectationExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -497,6 +574,7 @@
 					};
 					DC33FB00231131CD00D07F12 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 						TestTargetID = DC33FAEC231131CC00D07F12;
 					};
 				};
@@ -659,6 +737,7 @@
 				DC33FB1C231133F700D07F12 /* PresenterInterface.swift in Sources */,
 				DC33FB2B231135DB00D07F12 /* Initializable.swift in Sources */,
 				DC33FB5323114F0800D07F12 /* DecodableExtensions.swift in Sources */,
+				DC71101C2311E00200E8A1A4 /* NumericExtensions.swift in Sources */,
 				DC33FB802311957700D07F12 /* HomeCellItem.swift in Sources */,
 				DC33FB7E231192BE00D07F12 /* HomeTableViewCell.swift in Sources */,
 				DC33FB74231177DE00D07F12 /* MoneyFormatter.swift in Sources */,
@@ -669,7 +748,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC33FB06231131CD00D07F12 /* BTCUSDOrderBookTests.swift in Sources */,
+				DC71101A2311DE4500E8A1A4 /* HomeInteractorInterfaceSpy.swift in Sources */,
+				DC71102323127A9B00E8A1A4 /* ExpectationExtensions.swift in Sources */,
+				DC7110132311D5F800E8A1A4 /* MoneyFormatterSpec.swift in Sources */,
+				DC71101E2311E12900E8A1A4 /* HomeWireframeInterfaceSpy.swift in Sources */,
+				DC7110112311D26F00E8A1A4 /* EncodableExtensionsSpec.swift in Sources */,
+				DC7110202311E1AC00E8A1A4 /* HomePresenterSpec.swift in Sources */,
+				DC7110182311DDF100E8A1A4 /* HomeViewControllerSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,6 +950,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29ZNGBT83H;
 				INFOPLIST_FILE = BTCUSDOrderBookTests/Info.plist;
@@ -875,6 +961,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CaffeinatedCode.BTCUSDOrderBookTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BTCUSDOrderBook.app/BTCUSDOrderBook";
@@ -887,6 +974,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29ZNGBT83H;
 				INFOPLIST_FILE = BTCUSDOrderBookTests/Info.plist;

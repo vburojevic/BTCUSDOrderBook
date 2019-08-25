@@ -111,6 +111,7 @@ extension HomePresenter: HomePresenterInterface {
         let isHeaderDataLoading = headerItem
             .mapTo(false)
             .startWith(true)
+            .distinctUntilChanged()
         
         // Cell items
         let cellItems = self.cellItems()
@@ -119,6 +120,7 @@ extension HomePresenter: HomePresenterInterface {
         let isTableDataLoading = cellItems
             .mapTo(false)
             .startWith(true)
+            .distinctUntilChanged()
         
         return HomeViewInput(headerItem: headerItem, isHeaderIndicatorAnimating: isHeaderDataLoading, isHeaderHidden: isHeaderDataLoading, cellItems: cellItems, isTableIndicatorAnimating: isTableDataLoading, isTableHidden: isTableDataLoading)
     }

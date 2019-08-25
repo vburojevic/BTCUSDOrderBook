@@ -54,7 +54,7 @@ final class HomeViewController: UIViewController {
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             headerView.leftAnchor.constraint(equalTo: view.leftAnchor),
             headerView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 200)
+            headerView.heightAnchor.constraint(equalToConstant: 190)
         ])
         
         // Header activity indicator view

@@ -101,7 +101,7 @@ final class HomeHeaderView: UIView {
             footerStackView.topAnchor.constraint(equalTo: headerStackView.bottomAnchor, constant: 32),
             footerStackView.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 16),
             footerStackView.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -16),
-            footerStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -8)
+            footerStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
         
         // Buy orders label

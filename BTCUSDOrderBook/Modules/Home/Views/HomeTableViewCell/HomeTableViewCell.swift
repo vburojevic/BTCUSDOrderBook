@@ -41,6 +41,7 @@ final class HomeTableViewCell: UITableViewCell, Reusable {
     
     private func configureView() {
         // View
+        contentView.backgroundColor = .backgroundPrimary
         selectionStyle = .none
         
         // Buy stack view

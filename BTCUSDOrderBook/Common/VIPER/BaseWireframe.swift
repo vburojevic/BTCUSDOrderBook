@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RxAlertController
 import RxSwift
 import RxCocoa
 
@@ -17,7 +16,7 @@ protocol WireframeInterface: class {
     func pop()
     func close()
     
-    func rxShowAlert(withTitle title: String?, message: String?, buttonTitles: [String], preferredStyle: UIAlertController.Style) -> Single<Int>
+    func showAlert<T>(title: String?, message: String?, actions: [AlertAction<T>]) -> Maybe<T>
 }
 
 class BaseWireframe: WireframeInterface {
@@ -101,8 +100,14 @@ extension WireframeInterface where Self: BaseWireframe {
 
 extension WireframeInterface where Self: BaseWireframe {
     
-    func rxShowAlert(withTitle title: String?, message: String? = nil, buttonTitles: [String], preferredStyle: UIAlertController.Style = .alert) -> Single<Int> {
-        return UIAlertController.rx.show(in: viewController, title: title, message: message, buttonTitles: buttonTitles, preferredStyle: preferredStyle)
+    func showAlert<T>(title: String?, message: String?, actions: [AlertAction<T>]) -> Maybe<T> {
+        return UIAlertController.present(
+            on: viewController,
+            title: title,
+            message: message,
+            actions: actions,
+            style: .alert
+        )
     }
     
 }

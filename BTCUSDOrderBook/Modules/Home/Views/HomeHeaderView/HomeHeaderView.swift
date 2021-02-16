@@ -125,7 +125,9 @@ final class HomeHeaderView: UIView {
         footerStackView.addArrangedSubview(ordersStackView)
         
         // Price and amount stack view
-        let priceAndAmountStackView = UIStackView(arrangedSubviews: [createPriceAndAmountLabelsStackView(), createPriceAndAmountLabelsStackView()])
+        let priceAndAmountStackView = UIStackView(
+            arrangedSubviews: [createPriceAndAmountLabelsStackView(), createPriceAndAmountLabelsStackView()]
+        )
         priceAndAmountStackView.distribution = .fillEqually
         priceAndAmountStackView.spacing = 16
         footerStackView.addArrangedSubview(priceAndAmountStackView)

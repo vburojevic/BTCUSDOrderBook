@@ -14,7 +14,9 @@ final class AppearanceInitializer: Initializable {
         // Navigation bar
         UINavigationBar.appearance().barTintColor = .primary
         UINavigationBar.appearance().tintColor = .textSecondary
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.textSecondary]
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.textSecondary
+        ]
     }
     
 }

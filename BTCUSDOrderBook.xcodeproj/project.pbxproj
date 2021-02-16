@@ -56,6 +56,8 @@
 		DC71101E2311E12900E8A1A4 /* HomeWireframeInterfaceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC71101D2311E12900E8A1A4 /* HomeWireframeInterfaceSpy.swift */; };
 		DC7110202311E1AC00E8A1A4 /* HomePresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC71101F2311E1AC00E8A1A4 /* HomePresenterSpec.swift */; };
 		DC71102323127A9B00E8A1A4 /* ExpectationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC71102223127A9B00E8A1A4 /* ExpectationExtensions.swift */; };
+		DCB67D3B25DBCB7400C000F4 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB67D3A25DBCB7400C000F4 /* UIAlertController+Extension.swift */; };
+		DCB67D4125DBCB8F00C000F4 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB67D4025DBCB8F00C000F4 /* AlertAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,8 @@
 		DC71101D2311E12900E8A1A4 /* HomeWireframeInterfaceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframeInterfaceSpy.swift; sourceTree = "<group>"; };
 		DC71101F2311E1AC00E8A1A4 /* HomePresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpec.swift; sourceTree = "<group>"; };
 		DC71102223127A9B00E8A1A4 /* ExpectationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpectationExtensions.swift; sourceTree = "<group>"; };
+		DCB67D3A25DBCB7400C000F4 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		DCB67D4025DBCB8F00C000F4 /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,8 +197,7 @@
 		DC33FAEF231131CC00D07F12 /* BTCUSDOrderBook */ = {
 			isa = PBXGroup;
 			children = (
-				DC33FB102311334200D07F12 /* App */,
-				DC33FAF0231131CC00D07F12 /* AppDelegate.swift */,
+				DCB67D0D25DBC45D00C000F4 /* App */,
 				DC33FB112311337300D07F12 /* Modules */,
 				DC33FB13231133D400D07F12 /* Common */,
 				DC33FAF7231131CD00D07F12 /* Assets.xcassets */,
@@ -212,13 +215,6 @@
 				DC33FB07231131CD00D07F12 /* Info.plist */,
 			);
 			path = BTCUSDOrderBookTests;
-			sourceTree = "<group>";
-		};
-		DC33FB102311334200D07F12 /* App */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = App;
 			sourceTree = "<group>";
 		};
 		DC33FB112311337300D07F12 /* Modules */ = {
@@ -299,6 +295,7 @@
 		DC33FB322311385900D07F12 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				DCB67D3925DBCB5800C000F4 /* UIAlertController+Extension */,
 				DC33FB2F231136EF00D07F12 /* UIColorExtensions.swift */,
 				DC33FB70231172B300D07F12 /* UIStackViewExtensions.swift */,
 			);
@@ -517,6 +514,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		DCB67D0D25DBC45D00C000F4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DC33FAF0231131CC00D07F12 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DCB67D3925DBCB5800C000F4 /* UIAlertController+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DCB67D3A25DBCB7400C000F4 /* UIAlertController+Extension.swift */,
+				DCB67D4025DBCB8F00C000F4 /* AlertAction.swift */,
+			);
+			path = "UIAlertController+Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -566,7 +580,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Caffeinated Code";
 				TargetAttributes = {
 					DC33FAEC231131CC00D07F12 = {
@@ -720,6 +734,7 @@
 				DC33FAF1231131CC00D07F12 /* AppDelegate.swift in Sources */,
 				DC33FB28231134BB00D07F12 /* HomeWireframe.swift in Sources */,
 				DC33FB6123116AA300D07F12 /* HomeHeaderView.swift in Sources */,
+				DCB67D3B25DBCB7400C000F4 /* UIAlertController+Extension.swift in Sources */,
 				DC33FB26231134BB00D07F12 /* HomeViewController.swift in Sources */,
 				DC33FB7623117D6D00D07F12 /* ObservableTypeExtensions.swift in Sources */,
 				DC33FB1E231133F700D07F12 /* InteractorInterface.swift in Sources */,
@@ -730,6 +745,7 @@
 				DC33FB3E23113CAE00D07F12 /* OrderBookSnapshot.swift in Sources */,
 				DC33FB1B231133F700D07F12 /* BaseWireframe.swift in Sources */,
 				DC33FB3823113BCE00D07F12 /* SocketService.swift in Sources */,
+				DCB67D4125DBCB8F00C000F4 /* AlertAction.swift in Sources */,
 				DC33FB27231134BB00D07F12 /* HomeInteractor.swift in Sources */,
 				DC33FB4423113D0B00D07F12 /* OrderBookUpdate.swift in Sources */,
 				DC33FB1D231133F700D07F12 /* ViewInterface.swift in Sources */,
@@ -814,6 +830,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -839,7 +856,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -875,6 +892,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -894,7 +912,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -908,11 +926,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CCA71E3B8182C6B39FA03C23 /* Pods-BTCUSDOrderBook.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29ZNGBT83H;
 				INFOPLIST_FILE = BTCUSDOrderBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -928,11 +946,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 919A7E8FF7FEAA203ED5E77E /* Pods-BTCUSDOrderBook.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29ZNGBT83H;
 				INFOPLIST_FILE = BTCUSDOrderBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -948,7 +966,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 431061EB8086183EF394333A /* Pods-BTCUSDOrderBookTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -972,7 +989,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CBFA7537BBEA3DA27148F52B /* Pods-BTCUSDOrderBookTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

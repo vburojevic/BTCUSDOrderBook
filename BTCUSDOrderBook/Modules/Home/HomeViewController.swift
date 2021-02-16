@@ -21,10 +21,10 @@ final class HomeViewController: UIViewController {
     // MARK: - Private properties -
     
     private let headerView = HomeHeaderView(frame: .zero)
-    private let headerActivityIndicatorView = UIActivityIndicatorView(style: .gray)
+    private let headerActivityIndicatorView = UIActivityIndicatorView(style: .medium)
     
     private let tableView = UITableView(frame: .zero, style: .plain)
-    private let tableActivityIndicatorView = UIActivityIndicatorView(style: .gray)
+    private let tableActivityIndicatorView = UIActivityIndicatorView(style: .medium)
     
     private let disposeBag = DisposeBag()
 
@@ -67,6 +67,7 @@ final class HomeViewController: UIViewController {
         ])
         
         // Table view
+        tableView.backgroundColor = .backgroundPrimary
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.isHidden = true
         tableView.register(cellType: HomeTableViewCell.self)

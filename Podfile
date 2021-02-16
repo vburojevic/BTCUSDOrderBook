@@ -1,5 +1,5 @@
 # Platform
-platform :ios, '12.0'
+platform :ios, '13.0'
 
 # Inhibit all warnings
 inhibit_all_warnings!
@@ -8,7 +8,6 @@ inhibit_all_warnings!
 def reactive
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'RxAlertController'
 end
 
 def networking

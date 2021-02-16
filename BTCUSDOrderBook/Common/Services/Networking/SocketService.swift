@@ -38,7 +38,9 @@ final class SocketService: SocketServiceable {
     
     // MARK: - Private properties -
     
-    private let socket = WebSocket(url: URL(string: "wss://api.bitfinex.com/ws/")!)
+    private let socket = WebSocket(
+        request: URLRequest(url: URL(string: "wss://api.bitfinex.com/ws/")!)
+    )
     
     private lazy var textData: Observable<Data> = {
         return self.socket
@@ -75,7 +77,13 @@ final class SocketService: SocketServiceable {
                     socket.write(string: tickerRequest)
                 }
                 
-                if let orderBookRequest = OrderBookRequest(event: "subscribe", channel: "book", pair: "BTCUSD", prec: "P0", freq: "F1").utf8String {
+                if let orderBookRequest = OrderBookRequest(
+                    event: "subscribe",
+                    channel: "book",
+                    pair: "BTCUSD",
+                    prec: "P0",
+                    freq: "F1"
+                ).utf8String {
                     socket.write(string: orderBookRequest)
                 }
             })

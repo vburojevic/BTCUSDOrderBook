@@ -13,6 +13,11 @@ import RxSwift
 import RxCocoa
 
 final class HomePresenter {
+
+    enum NetworkErrorOption {
+        case cancel
+        case retry
+    }
     
     enum DataUpdate {
         case initial([OrderBook])
@@ -88,11 +93,19 @@ final class HomePresenter {
     }
     
     private func handleDisconnection() {
+        let cancelAction = AlertAction<NetworkErrorOption>(title: Strings.cancel.localized, value: .cancel)
+        let retryAction = AlertAction<NetworkErrorOption>(title: Strings.retry.localized, value: .retry)
         interactor
             .isConnected
             .filter { $0 == false }
-            .flatMap { [unowned wireframe] _ in wireframe.rxShowAlert(withTitle: nil, message: Strings.networkErrorMessage.localized, buttonTitles: [Strings.cancel.localized, Strings.retry.localized], preferredStyle: .alert) }
-            .filter { $0 == 1 }
+            .flatMap { [unowned wireframe] _ in
+                wireframe.showAlert(
+                    title: Strings.networkErrorMessage.localized,
+                    message: nil,
+                    actions: [cancelAction, retryAction]
+                )
+            }
+            .filter { $0 == .retry }
             .subscribe(onNext: { [unowned interactor] _ in interactor.connect() })
             .disposed(by: disposeBag)
     }
@@ -122,7 +135,14 @@ extension HomePresenter: HomePresenterInterface {
             .startWith(true)
             .distinctUntilChanged()
         
-        return HomeViewInput(headerItem: headerItem, isHeaderIndicatorAnimating: isHeaderDataLoading, isHeaderHidden: isHeaderDataLoading, cellItems: cellItems, isTableIndicatorAnimating: isTableDataLoading, isTableHidden: isTableDataLoading)
+        return HomeViewInput(
+            headerItem: headerItem,
+            isHeaderIndicatorAnimating: isHeaderDataLoading,
+            isHeaderHidden: isHeaderDataLoading,
+            cellItems: cellItems,
+            isTableIndicatorAnimating: isTableDataLoading,
+            isTableHidden: isTableDataLoading
+        )
     }
     
 }
